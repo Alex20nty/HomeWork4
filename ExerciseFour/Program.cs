@@ -32,8 +32,7 @@ int Opposite(int[] massive)
         opp = -1 * massive[i];
         Console.Write($" {opp} ");
     } 
-    return opp;
-    
+    return opp;   
 }
 FillArray(newArray);
 PrintArray(newArray);

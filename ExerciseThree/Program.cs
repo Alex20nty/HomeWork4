@@ -24,7 +24,7 @@ void PrintArray(int[] array)
     }
 }
 
-void SumArray(int[] ourArray)
+int SumArray(int[] ourArray)
 {
     int number = ourArray.Length;
     int sum = 0;
@@ -33,17 +33,19 @@ void SumArray(int[] ourArray)
         if(ourArray[i] > 0)
         {
             sum = sum + ourArray[i];
-            Console.WriteLine(sum);
         }
             if(ourArray[i] < 0)
             {
-                Console.WriteLine("-1");
+                sum = sum + ourArray[i];
             }
     }
+    return sum;
 }
 int[] newArray = new int[12];
 FillArray(newArray);
 PrintArray(newArray);
-SumArray(newArray);
+int result = SumArray(newArray);
+Console.WriteLine();
+Console.WriteLine("Сумма положительных элементов = " +result);
 
 
